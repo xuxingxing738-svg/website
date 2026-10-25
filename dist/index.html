@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#111827" />
+  <title>模拟人生 · 权力剩余时间情境实验 Demo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark">◇</span> 模拟人生</div>
+      <div class="top-meta"><span id="timeBadge" class="time-badge" hidden></span><span id="chapterTag">情境实验 DEMO</span><button id="muteBtn" class="icon-btn" aria-label="切换音效">♪</button></div>
+    </header>
+
+    <section id="stage" class="stage" hidden>
+      <div class="game-frame">
+        <canvas id="game" width="640" height="360" aria-label="像素风委员会办公室，秘书与来访者会进出移动"></canvas>
+        <div id="objective" class="objective"></div>
+        <div id="toast" class="toast" role="status"></div>
+        <div class="scanlines" aria-hidden="true"></div>
+      </div>
+
+      <section id="dialog" class="dialog" aria-live="polite">
+        <canvas id="portrait" width="72" height="72" aria-hidden="true"></canvas>
+        <div class="dialog-copy">
+          <div id="speaker" class="speaker"></div>
+          <p id="line" class="line">靠近可互动的物品，按 E 或点击画面进行互动。</p>
+          <div id="choices" class="choices"></div>
+        </div>
+      </section>
+
+      <p id="hint" class="hint">鼠标点击 · 空格键继续 · 数字键选择</p>
+    </section>
+  </main>
+
+  <section id="screen" class="screen"></section>
+  <div id="modal" class="modal" hidden></div>
+  <script src="materials.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
